@@ -15,7 +15,7 @@ GymPass Style app.
 - [] Deve ser possivel validar o check-in de um usuário;
 - [] Deve ser possivel cadastrar uma academia;
 
-## RNs (Requisitos de negócio)
+## RNs (Regras de negócio)
 
 - [] O usuário não deve poder se cadastrar com um e-mail duplicado;
 - [] O usuário não pode fazer 2 check-ins no mesmo dia;
@@ -30,4 +30,3 @@ GymPass Style app.
 - [] Os dados da aplicação precisam estar persistidos em um banco PostgresSQL;
 - [] Todas as listas de dados precisam estar paginadas com 20 itens por pagina;
 - [] O usuário deve ser identificado por um JWT (JSON web Token);
-
