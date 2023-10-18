@@ -4,6 +4,7 @@ import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coor
 import { CheckIn } from "@prisma/client";
 import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
 import { MaxdistanceError } from "./errors/max-distance-error";
+import { ResourceNotFoundError } from "./errors/resource-not-found-error";
 
 interface CheckInRequest {
   userId: string;
@@ -31,7 +32,7 @@ export class CheckInUseCase {
     const gym = await this.gymsRepository.findById(gymId);
 
     if (!gym) {
-      throw new Error();
+      throw new ResourceNotFoundError();
     }
 
     const distance = getDistanceBetweenCoordinates(
