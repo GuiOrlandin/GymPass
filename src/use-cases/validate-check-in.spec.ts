@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository";
 import { ValidateCheckInUseCase } from "./validate-check-in";
 import { ResourceNotFoundError } from "./errors/resource-not-found-error";
+import { LateCheckinValidationError } from "./errors/late-checkin-in-validation-error";
 
 let checkInsRepository: InMemoryCheckInsRepository;
 let sut: ValidateCheckInUseCase;
@@ -56,6 +57,6 @@ describe("Validate check-in Use Case ", () => {
       sut.execute({
         checkInId: createdCheckin.id,
       })
-    ).rejects.toBeInstanceOf(Error);
+    ).rejects.toBeInstanceOf(LateCheckinValidationError);
   });
 });
