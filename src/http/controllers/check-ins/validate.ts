@@ -1,4 +1,3 @@
-import { makeCheckInsUseCase } from "@/use-cases/factories/make-check-ins-use-case";
 import { makeValidateCheckInsUseCase } from "@/use-cases/factories/make-validate-check-in-use-case";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
@@ -8,7 +7,7 @@ export async function validate(request: FastifyRequest, reply: FastifyReply) {
     checkInId: z.string().uuid(),
   });
 
-  const { checkInId } = validateCheckInsParamsSchema.parse(request.body);
+  const { checkInId } = validateCheckInsParamsSchema.parse(request.params);
 
   const validateCheckInsUseCase = makeValidateCheckInsUseCase();
 
