@@ -24,8 +24,6 @@ describe("Get User profile Use Case ", () => {
       userId: createdUser.id,
     });
 
-    console.log(user);
-
     expect(user.name).toEqual("John Doe");
   });
 
