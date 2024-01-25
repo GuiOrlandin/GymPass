@@ -2,6 +2,15 @@
 
 GymPass Style app.
 
+🛠 Tecnologias utilizadas
+
+TypeScript
+
+fastify
+
+Node.js
+
+
 ## RFs (Requisitos funcionais)
 
 - [x] Deve ser possivel se cadastrar;
