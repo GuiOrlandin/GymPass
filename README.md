@@ -2,7 +2,7 @@
 
 GymPass Style app.
 
-🛠 Tecnologias utilizadas
+# 🛠 Tecnologias utilizadas
 
 TypeScript
 
