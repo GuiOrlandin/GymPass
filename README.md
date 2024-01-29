@@ -6,6 +6,12 @@ GymPass Style app.
 
 TypeScript
 
+docker
+
+Prisma
+
+postgresql
+
 fastify
 
 Node.js
